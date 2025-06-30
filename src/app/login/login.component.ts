@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  loginId = 'dddddd'
-  password = 'ppppp'
-  message = ''
+  // loginId = ''
+  // password = ''
+  // message = ''
+
+  form: any = {
+    data: {},
+    message: ''
+  }
 
   constructor(private router: Router) {
 
@@ -18,15 +23,16 @@ export class LoginComponent {
 
   signIn() {
 
-    
-    console.log(this.loginId)
-    console.log(this.password)
 
-    if (this.loginId=='admin' && this.password=='admin') {
-      this.message='login success'
-      
+    console.log(this.form.data.loginId)
+    console.log(this.form.data.password)
+
+    if (this.form.data.loginId == 'admin' && this.form.data.password == 'admin') {
+      // this.form.message = 'login success'
+      this.router.navigateByUrl('welcome')
+
     } else {
-      this.message='login fail'
+      this.form.message = 'Invalid login credentials'
     }
   }
 
