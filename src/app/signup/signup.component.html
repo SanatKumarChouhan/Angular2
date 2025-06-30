@@ -1,1 +1,41 @@
-<p>signup works!</p>
+<app-navbar></app-navbar>
+<div align="center">
+
+    <font color="navy">
+        <h1>User Registration</h1>
+    </font>
+</div>
+
+<div align="center">
+    <h3>{{form.data.message}}</h3>
+</div>
+    <table align="center">
+        <tr>
+            <th>First Name: </th>
+            <td><input type="text" name="firstName" [(ngModel)]="form.data.firstName"></td>
+        </tr>
+        <tr>
+            <th>Last Name: </th>
+            <td><input type="text" name="lastName" [(ngModel)]="form.data.lastName"></td>
+        </tr>
+        <tr>
+            <th>LoginId: </th>
+            <td><input type="text" name="loginId" [(ngModel)]="form.data.loginId"></td>
+        </tr>
+        <tr>
+            <th>Password: </th>
+            <td><input type="text" name="password" [(ngModel)]="form.data.password"></td>
+        </tr>
+        <tr>
+            <th>DOB: </th>
+            <td><input type="date" name="dob" [(ngModel)]="form.data.dob"></td>
+        </tr>
+        <tr>
+            <th>Address: </th>
+            <td><input type="text" name="address" [(ngModel)]="form.data.address"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><button (click)="signUp()">SignUp</button></td>
+        </tr>
+    </table>

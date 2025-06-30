@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
 
+  form:any={
+    data:{},
+    message:''
+  }
+
+  signUp(){
+    console.log('form: ', this.form)
+  }
 }
